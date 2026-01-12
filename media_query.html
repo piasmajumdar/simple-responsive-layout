@@ -7,7 +7,8 @@
     <style>
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap:10px;
         }
         .food {
@@ -16,7 +17,10 @@
             border-radius: 10px;
         }
         .food img {
-            width: 100%;
+            width: 50%;
+            border: 1px solid navy;
+            display: block;
+            margin: 0 auto;
         }
 
         /* smaller device */
