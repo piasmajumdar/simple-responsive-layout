@@ -6,7 +6,7 @@
     <title>Responsive Layout - I</title>
 
     <style>
-        body {
+        *, *::before, *::after{
             margin: 0;
             box-sizing: border-box;
         }
@@ -18,12 +18,29 @@
         .blog-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            /* overflow: hidden; */
+        
         }
-        .blog-container-2 .text{
+        .blog-container-2 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .blog-container-2>* {
+            flex: 1;
+        }
+
+        /* .blog-container-2 .text{
+            background-color: aqua;
+            width: 50%;
+        } */
+
+        /* THis will also work instead of flex. But I am not using it for learning with Flex. 
+         */
+        /* .blog-container-2 .text{
             grid-row: 1;
             grid-column: 1;
-        }
+        } */
+        
         .img-container {
             width: 100%;
             overflow: hidden;
@@ -34,8 +51,9 @@
         }
 
         .text {
-            padding: 20px;
+            /* padding: 20px; */
             height: 100%;
+            overflow: hidden;
         }
 
         @media screen and (max-width: 576px) {
